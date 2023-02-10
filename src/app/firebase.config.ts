@@ -12,5 +12,14 @@ export const firebaseConfig = {
   messagingSenderId: "224845555955",
   appId: "1:224845555955:web:4e683ea86baaf273186f86"
 };
+export declare interface Persistence {
+    /**
+     * Type of Persistence.
+     * - 'SESSION' is used for temporary persistence such as `sessionStorage`.
+     * - 'LOCAL' is used for long term persistence such as `localStorage` or `IndexedDB`.
+     * - 'NONE' is used for in-memory, or no persistence.
+     */
+    readonly type: 'SESSION' | 'LOCAL' | 'NONE';
+}
 
 // Initialize Firebase

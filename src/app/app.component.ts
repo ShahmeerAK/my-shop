@@ -10,15 +10,15 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent implements OnInit{
 
-  constructor(private authService:AuthService) {
+  constructor(public authService:AuthService) {
     
   }
   ngOnInit(): void {
     initializeApp(firebaseConfig);
   }
-  isAuthenticated() {
-    return this.authService.isAuthenticated;
-  }
+  // isAuthenticated() {
+  //   return this.authService.isAuthenticated;
+  // }
 
   logout() {
     this.authService.logout();

@@ -4,12 +4,12 @@
     </div>
     <div>
         <a class="mx-2" routerLink="/cart">My Cart</a>
-        <ng-container *ngIf="!isAuthenticated()" >
+        <ng-container *ngIf="!authService.currentUser" >
         <a class="mx-2" routerLink="/login">Login</a>
         <a class="mx-2" routerLink="/register">Register</a>
         </ng-container>
 
-        <ng-container *ngIf="isAuthenticated()">
+        <ng-container *ngIf="authService.currentUser">
             <button (click)="logout()" class="mx-4">Logout</button>
         </ng-container>
     </div>
